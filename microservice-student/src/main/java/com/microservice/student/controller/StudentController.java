@@ -15,7 +15,6 @@ public class StudentController {
     @Autowired
     private IStudentService studentService;
 
-
     @PostMapping("/create")
     @ResponseStatus(HttpStatus.CREATED)
     public void saveStudent(@RequestBody Student student){
