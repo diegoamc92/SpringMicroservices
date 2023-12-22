@@ -6,7 +6,7 @@ spring:
     name: msvc-student
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/studentDB
+    url: jdbc:mysql://localhost:3366/studentDB
     username: root
     password: root
   jpa:
