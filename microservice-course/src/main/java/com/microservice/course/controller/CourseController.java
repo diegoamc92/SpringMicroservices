@@ -21,7 +21,7 @@ public class CourseController {
     }
 
     @GetMapping("/all")
-    public ResponseEntity<?> findAllCourse(){
+    public ResponseEntity<?> findAllStudent(){
         return ResponseEntity.ok(courseService.findAll());
     }
 
