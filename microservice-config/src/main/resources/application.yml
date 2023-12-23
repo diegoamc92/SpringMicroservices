@@ -1,13 +1,9 @@
 server:
   port: 8888
 
-logging:
-  level:
-    root: debug
-
 spring:
   profiles:
-    active: dev
+    active: native
   application:
     name: config-server
   cloud:
