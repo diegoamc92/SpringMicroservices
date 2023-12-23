@@ -5,9 +5,7 @@ import com.microservice.course.dto.StudentDTO;
 import com.microservice.course.entities.Course;
 import com.microservice.course.http.response.StudentByCourseResponse;
 import com.microservice.course.persistence.ICourseRepository;
-import jakarta.annotation.PreDestroy;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -20,18 +18,6 @@ public class CourseServiceImpl implements ICourseService{
 
     @Autowired
     private StudentClient studentClient;
-
-    @Value("${server.port}")
-    private int serverPort;
-
-    @PreDestroy
-    public void onShutdown() throws InterruptedException {
-        System.out.println("Shutting down Course Service...");
-        // Agregar una espera antes de que el microservicio se cierre completamente
-        Thread.sleep(5000); // Espera de 5 segundos (ajusta según sea necesario)
-        System.out.println("Course Service shut down.");
-    }
-
 
     @Override
     public List<Course> findAll() {
